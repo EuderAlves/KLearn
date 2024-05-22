@@ -2,7 +2,7 @@
   <mat-toolbar>
     <img src="../../../favicon.ico" alt="Logo Klearn">
     <span class="spacer"></span>
-    <button mat-stroked-button color="primary">CADASTRE-SE</button>
+    <button mat-stroked-button (click)="route('/cadastro')" color="primary">CADASTRE-SE</button>
     <button mat-stroked-button (click)="route('/login')"><mat-icon>login</mat-icon>LOGIN</button>
   </mat-toolbar>
 </header>
