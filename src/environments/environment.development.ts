@@ -1,3 +1,3 @@
 export const environment = {
-  urlApi: 'https://klearn-backend.fly.dev/api/v1',
+  apiUrl: 'https://klearn-backend.fly.dev/api/v1',
 };
