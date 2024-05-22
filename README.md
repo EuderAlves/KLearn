@@ -30,3 +30,7 @@ npm install
 npm start
 
 7. A aplicação estará disponível em http://localhost:4200.
+
+### <a name="_uszv042glce8"></a>**Acesso a aplicação:**
+
+[k-learn.vercel.app](https://k-learn.vercel.app/)
