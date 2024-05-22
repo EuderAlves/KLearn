@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
@@ -26,9 +25,13 @@ export class FormBaseComponent {
   ngOnInit() {
     this.cadastroForm = this.formBuilder.group({
       nome: [null, Validators.required],
-      nascimento: [null, [Validators.required]],
-      senha: ['123', [Validators.required, Validators.minLength(3)]],
+      email: [null, Validators.required],
+      confirmarEmail: [null, Validators.required],
       genero: ['outro'],
+      nascimento: [null, [Validators.required]],
+      senha: [null, [Validators.required, Validators.minLength(3)]],
+      confirmarSenha: [null, Validators.required],
+      aceitarTermos: [null, Validators.required],
     });
     this.formularioService.setCadastro(this.cadastroForm);
   }
