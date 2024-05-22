@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthenticacaoService } from '../core/services/authenticacao.service';
-import { SwalUtils } from '../utils/SwalUtils';
+import { AuthenticacaoService } from 'src/app/core/services/authenticacao.service';
+import { SwalUtils } from 'src/app/utils/SwalUtils';
 
 @Component({
   selector: 'app-login',
@@ -32,13 +32,14 @@ export class LoginComponent implements OnInit {
       const senha = this.loginForm.value.senha;
       this.authService.users(1).subscribe({
         next: (value) => {
-          console.log('Autenticado com sucesso', value);
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('home');
           this.loginForm.reset();
         },
         error: (err) => {
-          this.swall.showGenericWaring('Usuário ou senha incorreos!');
-          console.log('Problema na autenticação', err);
+          //comentar linha abaixo e descomentar as outras
+          this.router.navigateByUrl('/home');
+          // this.swall.showGenericWaring('Usuário ou senha incorreos!');
+          // console.log('Problema na autenticação', err);
         },
       });
     }
