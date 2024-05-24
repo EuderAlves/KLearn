@@ -12,9 +12,10 @@ import { FormBaseComponent } from './shared/form-base/form-base.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { CadastroComponent } from './page/cadastro/cadastro.component';
+import { ContrucaoPagComponent } from './shared/contrucao-pag/contrucao-pag.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, FormBaseComponent, CadastroComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, FormBaseComponent, CadastroComponent, HomeComponent, ContrucaoPagComponent],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, HttpClientModule],
   providers: [SwalUtils, provideNgxMask()],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
