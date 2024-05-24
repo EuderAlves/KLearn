@@ -1,9 +1,19 @@
 .listMenu {
+  background-color: white;
   width: 250px;
   margin-top: 10px;
+  border-radius: 10px;
+
+  .itemMenu {
+    background-color: white;
+    transition: 0.2s;
+  }
+
+  .itemMenu:hover {
+    background-color: #BCDDB0;
+  }
 
   .lista {
-
     pointer-events: pointer;
     text-decoration: none;
   }
@@ -11,4 +21,7 @@
   .icon {
     margin-right: 13px;
   }
+
+
+
 }

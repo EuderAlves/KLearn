@@ -8,7 +8,26 @@
     margin-right: 72%;
   }
 
-  button {
-    margin-right: 4px;
-  }
+
+    .btCadastro{
+      margin-right: 4px;
+      border-radius: 25px;
+      transition: 0.5s;
+      background-color: #BCDDB0;
+    }
+    .btCadastro:hover{
+      background-color: #e6f5e0b7;
+    }
+    .btLogin{
+      margin-right: 4px;
+      border-radius: 25px;
+      background-color: #e6f5e0b7;
+      transition: 0.5s;
+    }
+    .btLogin:hover{
+      background-color: #BCDDB0;
+    }
+
+
+
 }
