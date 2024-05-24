@@ -1,0 +1,7 @@
+<mat-list class="listMenu mat-elevation-z8">
+  <mat-list-item *ngFor="let show of menu">
+    <a class="lista" [href]="show.path" matListItemTitle>
+      <mat-icon class="icon">diversity_1</mat-icon><strong class="titleMenu">{{show.menu}}</strong>
+    </a>
+  </mat-list-item>
+</mat-list>
