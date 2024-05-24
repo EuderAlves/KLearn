@@ -20,8 +20,4 @@ ngOnInit(): void {
     })
   }
 
-  routeSystem(rota: string) {
-    this.router.navigate(['/login']);
-  }
-
 }
