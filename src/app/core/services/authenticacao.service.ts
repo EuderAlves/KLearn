@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { PessoaUsuaria } from 'src/app/model/PessoaUsuaria.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -14,7 +15,8 @@ export class AuthenticacaoService {
   autenticar(email: string, senha: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/users/login`, { email, senha });
   }
-  users(id:number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/users/${id}`);
+  users(email: string): Observable<PessoaUsuaria[]> {
+   // https://api-fake-k-learn.vercel.app/user?email=aried@klearn.com
+    return this.http.get<PessoaUsuaria[]>(`${this.apiUrl}/user?email=${email}`);
   }
 }

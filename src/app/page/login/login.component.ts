@@ -30,16 +30,23 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       const email = this.loginForm.value.email;
       const senha = this.loginForm.value.senha;
-      this.authService.users(1).subscribe({
+      this.authService.users(email).subscribe({
         next: (value) => {
-          this.router.navigateByUrl('home');
-          this.loginForm.reset();
+          debugger;
+          if(value){
+            if(value[0].password === senha){
+              this.router.navigateByUrl('home');
+              this.loginForm.reset();
+            }else{
+              this.swall.showGenericWaring('Senha incorreta!');
+            }
+          }else{
+            this.swall.showGenericWaring('Usuário ou senha incorreos!');
+          }
         },
         error: (err) => {
-          //comentar linha abaixo e descomentar as outras
-          this.router.navigateByUrl('/home');
-          // this.swall.showGenericWaring('Usuário ou senha incorreos!');
-          // console.log('Problema na autenticação', err);
+          this.swall.showGenericWaring('Usuário ou senha incorreos!');
+          console.log('Problema na autenticação', err);
         },
       });
     }

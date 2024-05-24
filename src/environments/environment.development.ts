@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'https://klearn-backend.fly.dev/api/v1',
+  apiUrl: 'https://api-fake-k-learn.vercel.app',
 };
